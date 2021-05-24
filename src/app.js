@@ -1,11 +1,19 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let domi = "";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+for (let i = 0; i < pronoun.length; i++) {
+  domi = pronoun[i];
+  for (let j = 0; j < adj.length; j++) {
+    domi = pronoun[i] + adj[j];
+    for (let t = 0; t < adj.length; t++) {
+      domi = pronoun[i] + adj[j] + noun[t];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+      for (let p = 0; p < domi.length; p++) {
+        domi = pronoun[i] + adj[j] + noun[t] + domi[p];
+        console.log(domi);
+      }
+    }
+  }
+}
